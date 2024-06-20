@@ -1,0 +1,405 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  height: 100vh;
+  padding: 20px;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke;
+}
+
+.home a {
+  color: black;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.home svg {
+  color: #ffea00;
+}
+
+.flash {
+  position: absolute;
+  top: 20px;
+  height: max-content;
+  width: max-content;
+  border: 1px solid green;
+  background-color: #e4d316;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  display: flex;
+  box-shadow: 0px 100px 100px 100px rgba(0, 0, 0, 0.1);
+}
+
+.flash .close {
+  margin-left: 50px;
+  color: red;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.gameTitle {
+  height: max-content;
+  padding: 15px;
+  margin: 5vh;
+  font-size: 2em;
+  background: rgba(168, 166, 166, 0.5);
+  border-radius: 30px;
+  box-shadow: 0px 21px 100px -100px rgba(0, 0, 0, 0.1);
+}
+
+.gameTitle .rock,
+.gameTitle .scissors {
+  color: #ffea00;
+}
+
+.gameTitle .paper {
+  color: #000;
+}
+
+.gameTitle .hyphen {
+  color: #fff;
+}
+
+.indexImageContainer {
+  height: 50vh;
+  width: 40%;
+  position: relative;
+  /* border: 2px solid green; */
+  /* padding: 20px; */
+}
+
+.indexImageContainer .imageBox {
+  width: 50vh;
+  height: 50vh;
+  border-radius: 50%;
+  border: 2px solid #ffea00;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffea00;
+}
+
+.indexImageContainer .imageBox img {
+  height: inherit;
+  width: inherit;
+}
+
+.gamePlayTypeButtons {
+  height: max-content;
+  /* border: 1px solid brown; */
+  width: max-content;
+  padding: 10px;
+  margin-top: 2vh;
+  display: flex;
+}
+
+.gamePlayTypeButtons button {
+  color: #333;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: #ffea00;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  margin: 0 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gamePlayTypeButtons button svg {
+  margin: 0 10px;
+}
+
+.gamePlayTypeButtons button:hover {
+  background-color: #ffd700;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.gameInstruction {
+  height: max-content;
+  padding: 10px;
+  /* border: 1px solid red; */
+  margin-top: 2vh;
+}
+
+.gameInstruction button {
+  padding: 10px;
+  background-color: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+/*PlayComputer*/
+.gameDashboard {
+  height: 90vh;
+  width: 100%;
+  /* background: #ffea00; */
+  /* background: rgba(168, 166, 166, 0.5); */
+  /* border: 1px solid #ffea00; */
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gameDashboard .gameBoard {
+  width: 60%;
+  height: 80vh;
+  /* border: 1px solid green; */
+  /* background: rgba(255, 234, 0, 0.5); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.gameDashboard .gameBoard .chosenChoices {
+  width: 90%;
+  /* border: 1px solid green; */
+  height: 25vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gameDashboard .gameBoard .chosenChoices .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gameDashboard .gameBoard .chosenChoices .top span {
+  font-size: 3em;
+  margin: 10px 0;
+  /* border: 2px solid red; */
+}
+
+.gameDashboard .gameBoard .chosenChoices h2 {
+  background: rgba(255, 255, 253, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.gameDashboard .gameBoard .chosenChoices .computerChoice {
+  width: 40vh;
+  height: 20vh;
+  border: 1px solid #000;
+}
+
+.gameDashboard .gameBoard .chosenChoices .yourChoice {
+  width: 40vh;
+  height: 20vh;
+  border: 1px solid #000;
+}
+
+.gameDashboard .gameBoard .userChoiceButton {
+  width: 90%;
+  /* border: 1px solid green; */
+  height: 35vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.gameDashboard .gameBoard .userChoiceButton .choiceImageContainer {
+  flex: 1;
+  height: 30vh;
+  border: 1px solid black;
+  margin: 0 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 234, 0, 0.5);
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.gameDashboard .gameBoard .userChoiceButton .choiceImageContainer:hover {
+  background-color: rgba(255, 234, 0, 0.8);
+  transform: scale(1.05);
+}
+
+.gameDashboard .gameBoard .userChoiceButton .choiceImageContainer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.gameDashboard .gameBoard .userChoiceButton .choiceImageContainer:active {
+  background-color: #e0a800;
+  transform: scale(0.5);
+}
+
+.gameDashboard .scoreBoard {
+  height: 80vh;
+  width: 25%;
+  /* border: 1px solid black; */
+  background: rgba(255, 234, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.gameDashboard .scoreBoard .scoreBox {
+  height: 30vh;
+  width: 35vh;
+  /* border: 1px solid black; */
+  background: whitesmoke;
+  border-radius: 10px;
+}
+
+.gameDashboard .scoreBoard .scoreBox .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gameDashboard .scoreBoard .scoreBox h2 {
+  background: rgba(255, 255, 253, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.gameDashboard .scoreBoard .scoreBox .score {
+  /* border: 1px solid red; */
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameDashboard .scoreBoard .scoreBox .score h1 {
+  font-size: 6em;
+}
+
+.gameDashboard .scoreBoard .reset {
+  height: max-content;
+  padding: 5px;
+  width: 35vh;
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.again {
+  background-color: #ffea00;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.again svg {
+  margin-right: 8px;
+}
+
+.again:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
+
+.again:active {
+  background-color: #e0a800;
+  transform: scale(1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gamePlayTypeButtons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gamePlayTypeButtons button {
+    position: relative;
+    top: 20px;
+    margin: 20px;
+  }
+
+  .gameDashboard {
+    flex-direction: column;
+  }
+
+  .gameDashboard .gameBoard,
+  .gameDashboard .scoreBoard {
+    width: 100%;
+    max-width: none;
+  }
+
+  .gameDashboard .gameBoard .chosenChoices .computerChoice,
+  .gameDashboard .gameBoard .chosenChoices .yourChoice {
+    width: 30vh;
+    height: 15vh;
+  }
+
+  .gameDashboard .gameBoard .userChoiceButton .choiceImageContainer {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home a {
+    font-size: 1.2em;
+  }
+
+  .gameTitle {
+    font-size: 1.5em;
+    margin: 3vh;
+  }
+
+  .gameDashboard .gameBoard .chosenChoices .top span {
+    font-size: 1.5em;
+  }
+
+  .gameDashboard .scoreBoard .scoreBox .score h1 {
+    font-size: 4em;
+  }
+
+  .again {
+    font-size: 1rem;
+  }
+}
