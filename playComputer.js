@@ -2,19 +2,20 @@
 
 const playComputer = document.querySelector(".playComputer");
 const content = document.querySelector(".content");
+const body = document.querySelector(".main");
 
 playComputer.addEventListener("click", function () {
   content.innerHTML = `
     <div class="home">
-        <a href ='index.html'>
+      <a href ='index.html'>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-  <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
-</svg>
+          <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+        </svg>
         Go Home
-        </a>
+      </a>
     </div>
     <div class="flash hidden">
-        <span class= "flashMessage">Hey, you won!</span>  
+        <span class= "flashMessage"></span>  
         <div class = "close">&times;</div>
     </div>
     <div class="gameDashboard">
@@ -183,9 +184,11 @@ playComputer.addEventListener("click", function () {
 
     if (playerScore === 10) {
       flash.classList.remove("hidden");
+      // body.style.background = "green";
       return (flashMessage.textContent = `🎉🎉You won!!!`);
     } else if (computerScore === 10) {
       flash.classList.remove("hidden");
+      // body.style.background = "green";
       return (flashMessage.textContent = `Computer won🎊🎊!!`);
     }
   }
@@ -207,5 +210,6 @@ playComputer.addEventListener("click", function () {
     computerScore = 0;
     playerScoreDisplay.textContent = playerScore;
     computerScoreDisplay.textContent = computerScore;
+    flash.classList.add("hidden");
   });
 });
